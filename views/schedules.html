@@ -1,0 +1,4 @@
+<p>schedules</p>
+{{range .schedule}}
+<li>{{.Name}} <span hx-delete="/deleteschedule/{{.ID}}"><img src="icons/delete.svg" alt=""></span></li>
+{{end}}

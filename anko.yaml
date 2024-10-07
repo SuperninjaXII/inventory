@@ -1,0 +1,13 @@
+application: 
+  root_path: "."
+  exec_path: "./app.go"
+  language: go
+  watch:
+    extensions: 
+      - go
+      - env
+      - html
+      - css
+      - js
+    files:
+      - go.mod

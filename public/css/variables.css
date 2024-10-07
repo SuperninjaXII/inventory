@@ -1,0 +1,28 @@
+.dark-theme {
+  --bg: #201F1E;
+  /* Neutral Dark */
+  --bg2: #252423;
+  /* Slightly lighter neutral */
+  --bg3: #323130;
+  /* Neutral Secondary */
+  --accent: #0078D4;
+  /* Fluent UI Blue */
+  --primary1: #4F6BED;
+  /* Communication Blue */
+  --primary2: #3A96DD;
+  /* Lighter Blue */
+  --secondary1: #C239B3;
+  /* Fluent UI Pink */
+  --secondary2: #750B1C;
+  /* Red */
+  --text-color: #F3F2F1;
+  /* Neutral Light */
+  --text-color2: #C8C6C4;
+  /* Neutral Quaternary */
+  --shadow: rgba(0, 0, 0, 0.6);
+  /* Soft shadow for dark theme */
+  --black: #000000;
+  /* Pure Black */
+  --white: #FFFFFF;
+  /* Pure White */
+}

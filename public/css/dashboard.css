@@ -1,0 +1,379 @@
+@import url("variables.css");
+
+*,
+:root,
+body {
+  margin: 0;
+}
+
+/* Add this to your CSS file or inside a <style> tag */
+* {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+* {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--black);
+  font-weight: 400;
+  font-family: sans-serif;
+  opacity: 1;
+}
+
+header {
+  display: flex;
+  height: 10svh;
+  width: 100svw;
+  background: var(--bg);
+}
+
+.brand {
+  width: 12svw;
+  height: 8svh;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  border-radius: 3rem;
+  background: var(--bg2);
+  color: var(--text-color);
+}
+
+.brand .logo {
+  width: 4svw;
+  height: 4svh;
+  border-radius: 5rem;
+  background: var(--accent);
+  margin: auto;
+}
+
+.brand h1 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+
+  width: 35svw;
+  height: 10svh;
+  margin: auto;
+}
+
+nav .nav-item {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 6svh;
+  width: 10svw;
+  border: none;
+  border-radius: 3rem;
+  background: var(--bg2);
+  color: var(--text-color);
+}
+
+nav .active {
+  background: var(--accent);
+}
+
+.nav-item img {
+  width: 1.2rem;
+  margin: auto;
+}
+
+.nav-item p {
+  font-size: 1.2rem;
+  margin: auto;
+}
+
+main {
+  display: flex;
+  width: 100svw;
+  height: auto;
+  justify-content: space-between;
+}
+
+section {
+  padding-top: 1svh;
+  border-radius: 2rem;
+}
+
+.extra-containers {
+  width: 35svw;
+  height: 60svh;
+}
+
+.products {
+  --container-width: 60svw;
+  --container-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  width: var(--container-width);
+  height: var(--container-height);
+}
+
+.h-layer {
+  display: flex;
+  width: var(--container-width);
+  height: 30svh;
+  justify-content: space-evenly;
+}
+
+.h-layer div {
+  width: calc(var(--container-width) / 2.1);
+  height: 30svh;
+  background: var(--bg2);
+  border-radius: 1.5rem;
+}
+
+.products-brief {
+  width: calc(var(--container-width) - 4svw);
+  height: auto;
+  background: var(--bg2);
+  margin: 1svw;
+  border-radius: 1rem;
+  padding: 2svw;
+}
+
+.products-brief .info {
+  color: var(--text-color);
+}
+
+.info h2 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.info p {
+  font-size: 1rem;
+  color: var(--text-color2);
+}
+
+.products-brief table {
+  background: var(--bg2);
+  border-radius: .5rem;
+  padding: .5rem;
+  width: calc(var(--container-width) - 4svw);
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: .1rem solid var(--primary1);
+}
+
+table thead {
+  color: var(--text-color);
+  background: var(--primary2);
+  padding: .5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+table th {
+  color: var(--text-color);
+  background: var(--primary1);
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem;
+}
+
+table tbody {
+  background: var(--bg2);
+  color: var(--text-color);
+}
+
+table tbody tr:hover {
+  background-color: var(--hover-bg);
+}
+
+table tbody tr:active {
+  background-color: var(--active-bg);
+}
+
+table th,
+table td {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--text-color);
+  overflow: auto;
+}
+
+.todo p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.todo li {
+  display: flex;
+  background: var(--bg3);
+  color: #fff;
+  padding: .8rem;
+  border-radius: .5rem;
+  border-left: .2rem solid var(--primary1);
+  list-style: none;
+  margin: .3rem;
+}
+
+.todo li span {
+  margin-left: auto;
+  font-size: .8rem
+}
+
+.stock-levels {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.stock-levels .text {
+  display: flex;
+  flex-direction: column;
+  width: 15svw;
+  height: auto;
+  margin-top: 2svh;
+}
+
+.stock-levels .text h2:first-of-type {
+  font-size: 2rem;
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+.stock-levels .text p {
+  font-size: 2rem;
+  color: var(--primary1);
+  font-weight: 500;
+}
+
+.stock-levels .progress {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 2rem;
+  height: 20svh;
+  background: var(--primary2);
+  border-radius: 2rem;
+}
+
+.progress .bar {
+  width: 2rem;
+  height: 10svh;
+  background: var(--accent);
+  border-radius: 2rem;
+}
+
+/* Make table responsive on smaller screens */
+@media (max-width: 768px) {
+  .products-brief table {
+    overflow-x: auto;
+    display: block;
+  }
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  width: 34svw;
+  background: var(--bg2);
+  padding: 1svw;
+}
+
+.schedule h1 {
+  color: var(--text-color);
+  margin-bottom: 3svh;
+  font-size: 1.7rem;
+}
+
+.schedule .input-group {
+  display: flex;
+  flex-direction: column;
+
+}
+
+label {
+  font-size: 1.3rem;
+  margin: 1rem;
+  text-align: center;
+  width: auto;
+  color: var(--text-color);
+  border-bottom: .2rem solid var(--primary1);
+}
+
+.schedule .input-group input {
+  width: clamp(10svw, 20rem, 25svw);
+}
+
+.input-group input {
+
+  padding: .4rem;
+  border: .1rem solid var(--white);
+  border-radius: .5rem;
+  background: var(--bg);
+  color: var(--text-color);
+}
+
+.date-container {
+  padding-top: 2rem;
+  justify-content: center;
+}
+
+.schedule .date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.date label {
+  font-weight: 500;
+  text-align: center;
+}
+
+.date .input-group input {
+  width: 5svw;
+  margin-top: 0;
+}
+
+.schedule button {
+  width: 25svw;
+  padding: .8rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5svh;
+  font-size: 1rem;
+  border: none;
+  border-radius: .7rem;
+  background: var(--accent);
+  color: var(--text-color);
+}

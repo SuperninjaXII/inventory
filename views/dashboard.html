@@ -1,0 +1,61 @@
+<main>
+  <section class="extra-containers">
+    <section class="schedule">
+      <h1>Add Schedule</h1>
+      <div class="input-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="the promo from makenin" />
+      </div>
+      <div class="date-container">
+
+        <div id="date" class="date">
+          <div class="input-group">
+            <label for="start">start</label>
+            <input type="date" name="start" id="start" placeholder="11/12/2011" />
+          </div>
+          <div class="input-group">
+            <label for="name">End</label>
+            <input type="date" name="name" id="name" placeholder="14/01/2024" />
+          </div>
+        </div>
+      </div>
+      <button type="submit">ADD</button>
+    </section>
+  </section>
+  <section class="products">
+    <div class="h-layer">
+      <div class="todo">
+
+      </div>
+      <div class="stock-levels">
+        <div class="text">
+          <h2>stock levels</h2>
+          <p>6000</p>
+          <h2>items</h2>
+        </div>
+
+        <div class="progress">
+          <div class="bar">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="products-brief">
+      <div class="info">
+        <h2>product details</h2>
+        <p class="tip">check the products tab for detailed info</p>
+      </div>
+      <table>
+        <thead>
+          <th>code</th>
+          <th>product name</th>
+          <th>cartegory</th>
+          <th>catelogue</th>
+        </thead>
+        <tbody hx-trigger="load" hx-get="/productsDashboard" hx-swap="innerHTML">
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
