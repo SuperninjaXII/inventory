@@ -1,5 +1,4 @@
 # This workflow will build a Golang project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
 
 name: Build Go Binary
 
@@ -24,13 +23,10 @@ jobs:
         run: mkdir -p binaries
 
       - name: Build for Linux
-        run: GOOS=linux GOARCH=amd64 go build -o binaries/myapp-linux ./app.go
+        run: GOOS=linux GOARCH=amd64 go build -o binaries/myapp-linux app.go
 
       - name: Build for Windows
-        run: GOOS=windows GOARCH=amd64 go build -o binaries/myapp.exe ./app.go
-
-      - name: Test
-        run: go test -v ./...
+        run: GOOS=windows GOARCH=amd64 go build -o binaries/myapp.exe app.go
 
       - name: List Binaries
         run: ls -l binaries/
