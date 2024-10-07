@@ -26,7 +26,7 @@ jobs:
 
       - name: Save Docker Image as a tar file
         run: |
-          docker save myapp:v1.23 -o myapp-v1.23.tar
+          docker save invetory:v1.23 -o myapp-v1.23.tar
 
       - name: Upload Docker Image
         uses: actions/upload-artifact@v3
