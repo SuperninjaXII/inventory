@@ -1,5 +1,4 @@
 # This workflow will build a Golang project
-
 name: Build Go Binary
 
 on:
@@ -12,7 +11,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -23,13 +23,18 @@ jobs:
         run: mkdir -p binaries
 
       - name: Build for Linux
-        run: GOOS=linux GOARCH=amd64 go build -o binaries/myapp-linux app.go
+        run: GOOS=linux GOARCH=amd64 go build -o binaries/myapp-v1.23-linux app.go
 
       - name: Build for Windows
-        run: GOOS=windows GOARCH=amd64 go build -o binaries/myapp.exe app.go
+        run: GOOS=windows GOARCH=amd64 go build -o binaries/myapp-v1.23.exe app.go
+
+      - name: Run Tests
+        run: go test -v ./...
 
       - name: List Binaries
         run: ls -l binaries/
+
+      - name: Upload Binaries
         uses: actions/upload-artifact@v3
         with:
           name: go-binaries
