@@ -24,10 +24,10 @@ jobs:
         run: mkdir -p binaries
 
       - name: Build for Linux
-        run: GOOS=linux GOARCH=amd64 go build -o binaries/myapp-linux 
+        run: GOOS=linux GOARCH=amd64 go build -o binaries/myapp-linux ./app.go
 
       - name: Build for Windows
-        run: GOOS=windows GOARCH=amd64 go build -o binaries/myapp.exe 
+        run: GOOS=windows GOARCH=amd64 go build -o binaries/myapp.exe ./app.go
 
       - name: Test
         run: go test -v ./...
