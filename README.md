@@ -1,15 +1,15 @@
-#Suntop
+# Suntop
 
 This is a web inventory Go application that runs on localhost:3000.
 
-##Prerequisites
+## Prerequisites
 
 Go (version 1.23 or later)
 
 Git (if cloning from a repository)
 
 
-##Getting Started
+## Getting Started
 
 1. Clone the repository (if applicable):
 ```
@@ -33,7 +33,7 @@ http://localhost:3000
 
 
 
-##Building the Application
+## Building the Application
 
 If you want to build the application into an executable binary, use the following command:
 
